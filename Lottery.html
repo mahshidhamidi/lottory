@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lottery</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        
+
+
+
+//Create a function that returns a unique number:
+
+
+
+let numbers_array = [];
+
+console.log(numbers_array)
+
+console.log(numbers_array.length)
+
+let count=0
+
+
+
+for(let iter=0; iter<7; iter++){ 
+
+   let number = Math.floor((Math.random() * 40) + 1);
+
+   if (!numbers_array.includes(number)) {
+
+      numbers_array.push(number);
+
+   } else{             // if (numbers_array.length - 1 !== maxVal) {
+
+    const number = Math.floor((Math.random() * 40) + 1)
+
+   }
+
+   
+
+}
+
+console.log("computer no:" +numbers_array.sort((a,b)=> a-b));
+
+
+user_number_array=[];
+
+for(let iter1=0; iter1<(count+7); iter1++){ 
+
+    let userinput= Number(prompt("Enter your lucky number"));
+
+    if (iter1===0){
+
+    user_number_array.push(userinput);
+
+    }
+
+    
+
+    else if (user_number_array.includes(userinput) ) {
+
+        let userinput= Number(prompt("Your number is not valid. Enter your lucky number")); 
+
+        count++
+
+
+
+    }
+
+    else if (userinput >40 || userinput <1 ){
+
+        let userinput= Number(prompt("Your number is not valid. Enter your lucky number")); 
+
+        count++
+
+    }
+
+ 
+
+
+
+    else {
+
+        user_number_array.push(userinput);  
+
+        //count ++       
+
+    }   
+
+
+
+}
+
+console.log("lucky_ours"+user_number_array.sort((a,b)=> a-b))
+
+let counter=0
+
+user_number_array.forEach((item2,inx)=>{
+
+    numbers_array.forEach((elements) =>{
+
+        if (item2===elements){
+
+            counter++
+
+            console.log(item2);
+
+        }
+
+    })
+
+   
+
+})
+
+console.log(numbers_array) // returns all unique numbers
+
+
+
+console.log("You hit" + counter + "numbers")
+
+    </script>
+
+</body>
+
+</html>
